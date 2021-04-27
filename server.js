@@ -1,10 +1,21 @@
 const express = require('express');
 const cors = require('cors');
-const app = express();
+const mongoClient = require('mongodb').MongoClient;
 
 const employeesRoutes = require('./routes/employees.routes');
 const departmentsRoutes = require('./routes/departments.routes');
 const productsRoutes = require('./routes/products.routes');
+
+mongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {
+  if (err){
+    console.log(err);
+  }
+  else {
+    console.log('Successfully connected to the database');
+  }
+});
+
+const app = express();
 
 app.use(cors());
 app.use(express.json());
