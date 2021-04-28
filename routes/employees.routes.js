@@ -4,7 +4,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 router.get('/employees', (req, res) => {
   req.db.collection('employees').find().toArray((err, data) => {
-    if(err) res.status(500).json({message: err});
+    if(err) res.status(500).json({ message: err });
     else res.json(data);
   });
 });
