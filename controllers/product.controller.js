@@ -22,7 +22,6 @@ exports.getRandom = async (req, res) => {
   catch(err) {
     res.status(500).json({ message: err });
   }
-
 };
 
 exports.getId = async (req, res) => {
@@ -35,7 +34,6 @@ exports.getId = async (req, res) => {
   catch(err) {
     res.status(500).json({ message: err });
   }
-
 };
 
 exports.post = async (req, res) => {
@@ -50,7 +48,6 @@ exports.post = async (req, res) => {
   } catch(err) {
     res.status(500).json({ message: err });
   }
-
 };
 
 exports.putId = async (req, res) => {
@@ -66,7 +63,6 @@ exports.putId = async (req, res) => {
   catch (err) {
     res.status(500).json({ message: err });
   }
-
 };
 
 exports.deleteId = async (req, res) => {
@@ -82,5 +78,4 @@ exports.deleteId = async (req, res) => {
   catch(err) {
     res.status(500).json({ message: err });
   }
-
 };
